@@ -45,7 +45,22 @@ namespace LineComparision
             else
                 Console.WriteLine("The given straight"
                     + " lines are not identical");
-                    
+
+            //UseCase 3
+            Console.WriteLine("enter the point a1");
+            float a1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("enter the point a2");
+            float a2 = Convert.ToInt32(Console.ReadLine());
+
+           float  distance2 = (float)Math.Sqrt((z2 - z1) * (z2 - z1) + (a2 - a1) * (a2 - a1));
+            Console.WriteLine("Distance between two points({0},{1}),({2},{3}) is :{4}", z1, a1, z2, a2, distance);
+            if (distance < distance2)
+                Console.WriteLine("first line is less than second line");
+            else if(distance>distance2)
+                Console.WriteLine("first line is greater than second line");
+            else
+                Console.WriteLine("first line is equal to second line");
             Console.ReadLine();
         }
     }
